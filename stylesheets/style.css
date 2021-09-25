@@ -1,0 +1,17 @@
+body {
+  font-family: helvetica;
+  color: white;
+  background-color: black;
+}
+#header {
+  width: "100vw";
+}
+#header {
+  font-size: 2vw;
+}
+ul {
+  color: #d90504;
+}
+a {
+  color: #d90504;
+}

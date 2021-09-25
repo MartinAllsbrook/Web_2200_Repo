@@ -4,12 +4,15 @@ body {
   background-color: black;
 }
 #header {
-  width: "100vw";
+  font-size: 2.5vw;
 }
-#header {
-  font-size: 2vw;
+#header img {
+  width: 100vw;
 }
 ul {
+  color:#707070;
+}
+#work ul {
   color: #d90504;
 }
 a {

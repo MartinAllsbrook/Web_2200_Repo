@@ -1,0 +1,45 @@
+/* This is a comment */
+
+h1{
+  font-size: 50px;
+  font-family: helvetica;
+}
+
+#top h1 {
+  color: yellow;
+  border: solid 10px grey;
+  border-radius: 10px
+}
+
+#input h1 {
+  color: pink;
+  font-size: 5vw
+}
+
+body {
+  background-color: rgb(0,0,0)
+}
+
+#top {
+  background-color: rgb(100,100,100)
+}
+
+#input {
+  background-color: rgb(150,150,150);
+  font-family: helvetica;
+}
+
+button {
+  background-color: pink;
+}
+
+ul {
+  color: orange;
+  font-family: cursive;
+  font-weight: 1000;
+}
+
+img {
+  width: 25vw;
+  margin: 10px;
+}

@@ -1,0 +1,53 @@
+body {
+  font-family: "objektiv-mk2" ;
+}
+
+p {
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+h1 {
+  border: solid rgb(100,100,100) 1px;
+  font-size: 3vw;
+}
+.background {
+  background-color: rgb(225,225,225);
+}
+p.background {
+  background-color: pink;
+}
+.background p{
+  background-color: lightblue;
+}
+.grey{
+  color: rgb(100,100,100) !important;
+}
+
+span {
+  color: blue;
+  font-weight: bold;
+}
+#solid{
+  border: solid rgb(255,200,0) 2px;
+}
+#dotted {
+  border: dotted rgb(255,200,0) 2px;
+}
+#dashed{
+  border: dashed rgb(255,200,0) 2px;
+}
+#double{
+  border: double rgb(255,200,0) 2px;
+}
+#ridge{
+  border: ridge rgb(255,200,0) 2px;
+}
+
+#two {
+  border: solid black 1px;
+  background-color: lightgreen;
+  margin: 10px;
+  /* top right bottom left */
+  padding: 1vw 2vw 1vw 3vw;
+}

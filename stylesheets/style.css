@@ -1,20 +1,42 @@
 body {
-  font-family: helvetica;
   color: white;
   background-color: black;
+  margin: 0;
+  padding: 0;
 }
-#header {
-  font-size: 2.5vw;
+h1 {
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
-#header img {
-  width: 100vw;
+header h1{
+  margin: 0vw 1vw 0vw 1vw;
+  font-size: 5vw;
+}
+header img {
+  width: 100%;
+}
+#main {
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0vw 1vw 0vw 1.5vw;
+}
+h2 {
+  font-weight: 900;
+}
+h3 {
+  font-weight: 700:
 }
 ul {
-  color:#707070;
+  color: white;
 }
-#work ul {
-  color: #d90504;
+a:link {
+  color: white;
 }
-a {
+a:visited {
+  color: #707070;
+}
+a:hover {
   color: #d90504;
 }

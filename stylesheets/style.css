@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 h1 {
   font-family: objektiv-mk2, sans-serif;
   font-weight: 800;
@@ -16,6 +17,7 @@ header h1{
 header img {
   width: 100%;
 }
+
 #main {
   font-family: objektiv-mk2, sans-serif;
   font-weight: 400;
@@ -39,4 +41,9 @@ a:visited {
 }
 a:hover {
   color: #d90504;
+}
+
+.lists {
+  float: left;
+  margin: 0px 100px 0px 10px
 }

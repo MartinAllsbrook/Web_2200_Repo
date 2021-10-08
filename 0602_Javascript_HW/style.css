@@ -13,18 +13,9 @@ h1{
   font-family: objektiv-mk2, sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 6.5vw;
+  font-size: 5vw;
   margin: 0px;
   padding: 0px;
-}
-
-.container {
-  position: relative;
-  text-align: center;
-}
-.centeredhead {
-  position: absolute;
-  top: 0%;
 }
 
 header img {
@@ -37,6 +28,7 @@ header img {
   font-family: objektiv-mk2, sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 12px;
   margin: 0px 10px 0px 1%;
 }
 h2 {

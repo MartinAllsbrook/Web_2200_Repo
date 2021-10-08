@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript</title>
+  </head>
+  <body>
+    <button id="b1">Make background grey</button> <br></br>
+    <button id="b2">Make background blue</button> <br></br>
+    <img src="Assets/Dubson.png" id='img1' alt="Image of Profesor Dubson from the CU Physics department."/>
+    <p>keep script at botom of page</p>
+  </body>
+
+  <script>
+    document.getElementById('b1').addEventListener('click', function(){
+      document.body.style.backgroundColor = '#c4c4c4';
+    })
+    document.getElementById('b2').addEventListener('click', function(){
+      document.body.style.backgroundColor = 'blue';
+    })
+
+    document.getElementById('img1').addEventListener('click', clickImage)
+
+    function clickImage() {
+      window.alert('Clicked Image of Dubson')
+    }
+  </script>
+</html>

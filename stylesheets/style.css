@@ -67,6 +67,9 @@ a:visited {
 a:hover {
   color: #d90504;
 }
+a:active {
+  color: #d90504;
+}
 
 .lists {
   float: left;

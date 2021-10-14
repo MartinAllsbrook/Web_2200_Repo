@@ -1,0 +1,61 @@
+body {
+  font-family: helvetica;
+  padding: 0px;
+  margin: 0px;
+}
+
+h2 {
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+}
+
+#hero{
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+#hero img{
+  width:100%;
+  position: relative;
+  bottom: 40px;
+  right: 10px;
+}
+
+#hero h1 {
+  z-index: 1;
+  position: relative;
+  margin: 0 0 0 2vw;
+  padding: 0px;
+  top: 3vh;
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+#one, #two, #three, #four {
+  margin-left: 3vw;
+  margin-right: 2vw;
+  margin-top: 5vw;
+}
+
+button {
+  background-color: lightblue;
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  margin: 10px;
+  padding: 12px 20px 8px 20px;
+  position: relative;
+}
+
+button:active {
+  background-color: blue;
+  color: white;
+}
+
+button:hover {
+  border: solid black 2px;
+}

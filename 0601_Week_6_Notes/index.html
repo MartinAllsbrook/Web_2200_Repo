@@ -35,13 +35,11 @@
     console.log("JAVASCRIPT LOADING");
     document.getElementById('b2').addEventListener('click', function(){
       alert("YOU CLICKED THE BUTTON THE SITE IS YELLOW");
-    })
+    });
     document.getElementById('b1').addEventListener('click', function(){
       document.body.style.backgroundColor = '#c4c4c4';
-    })
-    document.getElementById('b2').addEventListener('click', function(){
-      document.body.style.backgroundColor = 'yellow';
-    })
+    });
+    document.getElementById('b2').addEventListener('click', makeSans);
 
     document.getElementById('img1').addEventListener('click', clickImage);
     document.getElementById('img1').addEventListener('mouseover', hoverImage);
@@ -60,6 +58,11 @@
 
     function hoverImage() {
       document.body.style.background = 'cyan';
+    }
+
+    function makeSans(){
+      document.body.style.backgroundColor = 'yellow';
+      document.getElementById("one").style.color = "pink";
     }
     console.log("JAVASCRIPT LOADED");
   </script>

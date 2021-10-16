@@ -25,7 +25,7 @@
   </body>
 
   <script>
-    var funk = 1;
+    let funk = 1;
 
     document.getElementById('header').addEventListener('click', funkyTown);
 
@@ -38,7 +38,11 @@
       if(funk==6){document.body.style.backgroundColor = 'purple'};
       if(funk==7){document.body.style.backgroundColor = 'black'};
 
-      funk++;
+      if(funk>=7){
+        funk = 1;
+      }else{
+        funk++;
+      }
     }
   </script>
 </html>

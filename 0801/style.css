@@ -6,8 +6,10 @@
 .type {
   flex-grow: 1;
   border: 1px solid black;
+  width: auto;
+  margin: 2vw;
 }
 
 img {
-width: 31vw;
+  width: 31vw;
 }

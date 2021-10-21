@@ -1,0 +1,17 @@
+#flex {
+  display: flex;
+  margin: 150px;
+}
+
+div {
+  border: 1px solid black;
+  margin-left: 1vw;
+}
+
+.flexitem{
+  flex-grow: 1;
+}
+
+.flexitemX2{
+  flex-grow: 2;
+}

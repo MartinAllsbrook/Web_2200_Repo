@@ -1,0 +1,13 @@
+#types {
+  display: flex;
+  border: 1px solid black;
+}
+
+.type {
+  flex-grow: 1;
+  border: 1px solid black;
+}
+
+img {
+width: 31vw;
+}

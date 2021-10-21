@@ -1,87 +1,27 @@
-body {
-  color: white;
-  background-color: black;
-  margin: 0px;
-  padding: 0px;
-}
-
 header {
   padding: 0px;
   margin: 0px 0px 0px 0px;
 }
-h1{
-  font-family: objektiv-mk2, sans-serif;
-  font-weight: 800;
-  font-style: normal;
+header h1{
   font-size: 6.5vw;
-  margin: 0px;
-  padding: 0px;
 }
-
+header img {
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+}
 .container {
   position: relative;
   text-align: center;
 }
 .centeredhead {
   position: absolute;
-  top: 0%;
+  top: 10%;
 }
 
-header img {
-  padding: 0px;
-  margin: 0px 0px 0px 0px;
-  width: 100%;
-}
-
-#main {
-  font-family: objektiv-mk2, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0px 10px 0px 1%;
-}
-h2 {
-  font-weight: 900;
-  padding: 0px;
-  margin: 10px 0px 5px 0px;
-}
-h3 {
-  font-weight: 700:
-  padding: 0px;
-  margin: 5px 0px 5px 0px;
-}
-p {
-  padding: 0px;
-  margin: 5px 0px 13px 0px;
-}
-ul {
-  color: white;
-  padding: 0px;
-  margin: 5px 10px 13px 23px;
-}
-a:link {
-  color: white;
-}
-a:visited {
-  color: #707070;
-}
-a:hover {
-  color: #d90504;
-}
-a:active {
-  color: #d90504;
-}
-
-.lists {
-  float: left;
-  margin: 0px 100px 0px 10px;
-  padding: 0px;
-}
-
-#flex {
+#lists {
   display: flex;
 }
-
-div {
-  border-style: solid;
-  border-color: white;
+.list {
+  flex-grow: 1;
 }

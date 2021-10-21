@@ -9,12 +9,12 @@ header {
   padding: 0px;
   margin: 0px 0px 0px 0px;
 }
-h1{
+header h1{
   font-family: objektiv-mk2, sans-serif;
   font-weight: 800;
   font-style: normal;
   font-size: 6.5vw;
-  margin: 0px;
+  margin: 50px 20px;
   padding: 0px;
 }
 
@@ -70,18 +70,12 @@ a:hover {
 a:active {
   color: #d90504;
 }
-
-.lists {
-  float: left;
-  margin: 0px 100px 0px 10px;
-  padding: 0px;
-}
-
-#flex {
+#flexLists {
   display: flex;
 }
-
+.lists {
+  flex-grow: 1;
+}
 div {
-  border-style: solid;
-  border-color: white;
+  margin-left: 1vw;
 }

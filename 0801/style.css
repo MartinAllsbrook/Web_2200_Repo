@@ -6,8 +6,9 @@
 .type {
   flex-grow: 1;
   border: 1px solid black;
+  width: auto;
 }
 
-img {
-width: 31vw;
+.type img {
+  width: 31vw;
 }

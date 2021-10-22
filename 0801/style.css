@@ -10,5 +10,10 @@
 }
 
 .type img {
-  width: 31vw;
+  max-width: 30vw;
+}
+button{
+  float: right;
+  padding: 10px 50px;
+  margin-right: 3vw;
 }

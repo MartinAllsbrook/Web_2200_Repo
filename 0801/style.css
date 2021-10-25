@@ -5,15 +5,27 @@
 
 .type {
   flex-grow: 1;
-  border: 1px solid black;
   width: auto;
 }
-
 .type img {
   max-width: 30vw;
 }
+.type h2 {
+  margin: 0.3vw 0vw 0.3vw 1.7vw;
+  padding: 0;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+}
+
 button{
   float: right;
   padding: 10px 50px;
   margin-right: 3vw;
+}
+
+.blue{
+  background-color: blue;
 }

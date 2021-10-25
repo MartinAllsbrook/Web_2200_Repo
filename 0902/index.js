@@ -11,8 +11,8 @@ let right = false;
 let down = false;
 let left = false;
 // Strings to compare the position of the snakes head and tail to div ids
-let snakeHead = ["0 0"]
-let snakeTail = ["0 0"]
+let snakeHead = ["0 0"];
+let snakeTail = ["0 0"];
 // Int to tarack the snakes length
 let snakeLength = 8;
 // Ints to track the x & y positions of the snakes head and tail
@@ -20,9 +20,18 @@ let xTail = 0;
 let yTail = 0;
 let xHead = 0;
 let yHead = 0;
+// Ints to track the current food items position
+let xFood = 15;
+let yfood = 15;
+// String to compare the food's pos to the div ids
+let foodPos = ["15 15"];
+// Bool to track wether or not there is a food item on the board
+let isFood = false;
 // Arays to track where the snake currently is
 let xHistory = [0];
 let yHistory = [0];
+// Bool to track if the player lost
+let gameOver = false;
 
 
 // Event listener scanning for arrow key presses
@@ -65,10 +74,10 @@ window.addEventListener('keydown', function(e) {
 // console.log(document.getElementById(snakeHead).className == "cell cellOn");
 
 // Turn on the top left cell to indicate starting position
-document.getElementById(snakeHead).classList.toggle('cellOn')
+document.getElementById(snakeHead).classList.toggle('cellOn');
 
 // Call main(), everything below this is functions
-main()
+main();
 
 //--------------------------------------------------------------------------------------------------------------//
 
@@ -95,6 +104,13 @@ function gameOn() {
     // console.log("down: "+ down); // TESTING LINE
     // console.log("left: "+ left); // TESTING LINE
 
+    // If there isnt food on the board, generate a food item in any position except where the snake is
+    if(!isFood){
+      genFood();
+    }
+
+    //console.log(Math.floor(Math.random() * 16)); // TESTING LINE
+
     // Change xHead & yHead based on the snakes current movement state / the player's last button press
     if(up){
       // Must ask if yHead > 0 to keep the snake within the top bound
@@ -102,28 +118,32 @@ function gameOn() {
         // Decrease yHead by one to move snake
         yHead--;
       }else{
-        alert("Snake hit wall, Game Over :(")
+        gameOver = true;
+        alert("Snake hit wall, Game Over :(");
       }
     }else if(down){
       // Must ask if yHead < 15 to keep the snake within the bottom bound
       if(yHead < 15){
         yHead++;
       }else{
-        alert("Snake hit wall, Game Over :(")
+        gameOver = true;
+        alert("Snake hit wall, Game Over :(");
       }
     }else if(left){
       // Must ask if xHead > 0 to keep the snake within the left bound
       if(xHead > 0){
         xHead--;
       }else{
-        alert("Snake hit wall, Game Over :(")
+        gameOver = true;
+        alert("Snake hit wall, Game Over :(");
       }
     }else if(right){
       // Must ask if xHead < 15 to keep the snake within the right bound
       if(xHead < 15){
         xHead++;
       }else{
-        alert("Snake hit wall, Game Over :(")
+        gameOver = true;
+        alert("Snake hit wall, Game Over :(");
       }
     }
 
@@ -136,8 +156,9 @@ function gameOn() {
     // console.log(snakeHead); // TESTING LINE;
     if(document.getElementById(snakeHead).className == "cell") {
       document.getElementById(snakeHead).classList.toggle('cellOn');
-    }else{
-      alert("Snake hit it's self, Game Over :(")
+    }else if(!gameOver){
+      gameOver = true;
+      alert("Snake hit its self, Game Over :(");
     }
 
     // Once the snake has moved enough start removing it's tail
@@ -159,9 +180,36 @@ function gameOn() {
       }
     }
 
-    // Call gameOn again
-    gameOn();
+    // If the game is over call gameIsOver to end the game and don't call gameOn again
+    if(gameOver){
+      gameIsOver()
+    // Else call gameOn again
+    }else{
+      gameOn();
+    }
+
   }, 100)
+}
+
+function genFood(){
+  xFood = Math.floor(Math.random() * 16);
+  yFood = Math.floor(Math.random() * 16);
+  foodPos = [xFood + " " + yFood];
+
+  // if the randomly chosen coords are an empty cell
+  if(document.getElementById(foodPos).className == "cell") {
+    // turn the randomly chosen coords into food
+    document.getElementById(foodPos).classList.toggle('cellFood');
+    // set isFood to true bcause there is now food on the board
+    isFood = true;
+  // Else the random coords must be part of the snake so we call genFood again to re-try
+  }else{
+    genFood();
+  }
+}
+
+function gameIsOver(){
+  document.getElementById("header").innerHTML = "GAME OVER"
 }
 
 // Funtion to generate snake board

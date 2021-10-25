@@ -4,17 +4,26 @@ console.log("JS RUNNING");
 genDivs(16);
 
 //Create snake
-let snakeHead = ["0 0"]
+
 let up = false;
 let right = false;
 let down = false;
 let left = false;
+let snakeHead = ["0 0"]
+let snakeTail = ["0 0"]
+let snakeLength = 3;
+let xTail = 0;
+let yTail = 0;
+let xHead = 0;
+let yHead = 0;
+let xHistory = [0];
+let yHistory = [0];
 
 window.addEventListener('keydown', function(e) {
   // console.log('You pressed ' + e.key); // TESTING LINE
   if(e.key == "ArrowUp"){
     // console.log('Up Sucess'); // TESTING LINE
-     up = true;
+    up = true;
     right = false;
     down = false;
     left = false;
@@ -29,7 +38,7 @@ window.addEventListener('keydown', function(e) {
     down = true;
     left = false;
   }else if(e.key == "ArrowLeft"){
-    up = true;
+    up = false;
     right = false;
     down = false;
     left = true;
@@ -38,10 +47,30 @@ window.addEventListener('keydown', function(e) {
   }
 });
 
-main();
-let xHead = 0;
-let yHead = 0;
+// TESTING LINES
+// document.getElementById(snakeHead).classList.toggle('cellOn')
+// console.log(document.getElementById(snakeHead).className);
+// console.log(document.getElementById(snakeHead).className == "cell cellOn");
+
+document.getElementById(snakeHead).classList.toggle('cellOn')
+main()
+
 function main() {
+  setTimeout(function onTick() {
+    if(right||down){
+      gameOn();
+    }else{
+      // Call main again till game starts
+      main();
+    }
+  }, 100)
+}
+
+function waitToStart(){
+
+}
+
+function gameOn() {
   setTimeout(function onTick() {
     // console.log("up: "+ up); // TESTING LINE
     // console.log("right: "+ right); // TESTING LINE
@@ -50,23 +79,48 @@ function main() {
 
     // move xHead up if up arrow hit
     if(up){
+      if(yHead > 0){
+        yHead--;
+      }
+    }else if(down){
+      if(yHead < 15){
+        yHead++;
+      }
+    }else if(left){
       if(xHead > 0){
         xHead--;
-      }else {
-        xHead = 0;
+      }
+    }else if(right){
+      if(xHead < 15){
+        xHead++;
       }
     }
 
-    //
+    xHistory.push(xHead);
+    yHistory.push(yHead);
     snakeHead = [xHead + " " + yHead];
+    console.log(snakeHead);
+    if(document.getElementById(snakeHead).className == "cell") {
+      document.getElementById(snakeHead).classList.toggle('cellOn');
+    }
+    if(xHistory.length > snakeLength){
+      xTail = [xHistory[xHistory.length - 1 - snakeLength]]
+      yTail = [yHistory[yHistory.length - 1 - snakeLength]]
+      //console.log(xHistory + " , " + yHistory) // TESTING LINE
+      snakeTail = [xTail + " " + yTail];
+      //xHistory.splice(xHistory.length - 1 - snakeLength)
+      //yHistory.splice(yHistory.length - 1 - snakeLength)
+      console.log(snakeTail);
+      if(document.getElementById(snakeTail).className == "cell cellOn") {
+        console.log("yes");
+        document.getElementById(snakeTail).classList.toggle('cellOn');
+      }
+    }
 
-
-    // Call main again
-    main();
+    // Call gameOn again
+    gameOn();
   }, 100)
 }
-
-//document.getElementById("14").classList.toggle('cellOn') // TESTING LINE
 
 // Funtion to generate snake board
 function genDivs(v){

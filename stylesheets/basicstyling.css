@@ -1,0 +1,69 @@
+/*test*/
+body {
+  font-family: "Akkurat Std";
+  src: url(stylesheets\fonts\AkkuratStd-Regular.otf);
+  color: white;
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+}
+h1{
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px;
+}
+h2{
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  padding: 0px;
+  margin: 10px 0px 5px 0px;
+}
+h3{
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 700:
+  padding: 0px;
+  margin: 5px 0px 5px 0px;
+}
+p {
+  padding: 0px;
+  margin: 5px 0px 13px 0px;
+}
+ul {
+  color: white;
+  padding: 0px;
+  margin: 5px 10px 13px 23px;
+}
+
+#main {
+  margin: 0px 10px 0px 1%;
+}
+
+a:link {
+  color: white;
+}
+a:visited {
+  color: #707070;
+}
+a:hover {
+  color: #d90504;
+}
+a:active {
+  color: #d90504;
+}
+
+button{
+  color: black;
+  background-color: white;
+  border
+}
+button:visited {
+  color: #707070;
+}
+button:hover {
+  color: #d90504;
+}
+button:active {
+  color: #d90504;
+}

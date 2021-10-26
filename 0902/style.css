@@ -1,17 +1,24 @@
+/*Styling for game tiles*/
 .row {
   display: flex;
 }
-
 .cell {
   border: 1px solid white;
   padding: 2.2vh;
   margin: 0px;
 }
-
 .cellOn {
   background-color: white;
 }
-
 .cellFood {
   background-color: #d90504;
+}
+/*General Styling*/
+#flexSite{
+  display: flex;
+}
+
+#ui{
+  padding: 10px;
+  margin: 10px;
 }

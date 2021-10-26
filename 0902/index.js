@@ -195,6 +195,7 @@ function gameOn() {
       gameIsOver()
     // Else call gameOn again and prepare for another input next tick
     }else{
+      document.getElementById("score").innerHTML = ["Score: " + (snakeLength-3)]
       gotInput = false;
       gameOn();
     }

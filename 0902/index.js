@@ -32,37 +32,42 @@ let xHistory = [0];
 let yHistory = [0];
 // Bool to track if the player lost
 let gameOver = false;
-
+// Bool to keep track of wether an input was recived this tick
+let gotInput = false;
 
 // Event listener scanning for arrow key presses
 window.addEventListener('keydown', function(e) {
   // console.log('You pressed ' + e.key); // TESTING LINE
   // If the ArrowUp key is pressed and the snake isnt going down, set the snakes current state to up
-  if(e.key == "ArrowUp" && !down){
+  if(e.key == "ArrowUp" && !down && !gotInput){
     // console.log('Up Sucess'); // TESTING LINE
     // Set up to true and all other directions to false
     up = true;
     right = false;
     down = false;
     left = false;
+    gotInput = true;
   // Repeat with right/left
-  }else if(e.key == "ArrowRight" && !left){
+  }else if(e.key == "ArrowRight" && !left && !gotInput){
     up = false;
     right = true;
     down = false;
     left = false;
+    gotInput = true;
   // Repeat with down/up
-  }else if(e.key == "ArrowDown" && !up){
+  }else if(e.key == "ArrowDown" && !up && !gotInput){
     up = false;
     right = false;
     down = true;
     left = false;
+    gotInput = true;
   // Repeat with left/right
-  }else if(e.key == "ArrowLeft" && !right){
+  }else if(e.key == "ArrowLeft" && !right && !gotInput){
     up = false;
     right = false;
     down = false;
     left = true;
+    gotInput = true;
   }else{
     console.log("BAD KEYPRESS");
   }
@@ -188,11 +193,11 @@ function gameOn() {
     // If the game is over call gameIsOver to end the game and don't call gameOn again
     if(gameOver){
       gameIsOver()
-    // Else call gameOn again
+    // Else call gameOn again and prepare for another input next tick
     }else{
+      gotInput = false;
       gameOn();
     }
-
   }, 100)
 }
 

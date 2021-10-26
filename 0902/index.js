@@ -14,7 +14,7 @@ let left = false;
 let snakeHead = ["0 0"];
 let snakeTail = ["0 0"];
 // Int to tarack the snakes length
-let snakeLength = 8;
+let snakeLength = 3;
 // Ints to track the x & y positions of the snakes head and tail
 let xTail = 0;
 let yTail = 0;
@@ -156,6 +156,11 @@ function gameOn() {
     // console.log(snakeHead); // TESTING LINE;
     if(document.getElementById(snakeHead).className == "cell") {
       document.getElementById(snakeHead).classList.toggle('cellOn');
+    }else if(document.getElementById(snakeHead).className == "cell cellFood"){
+      document.getElementById(snakeHead).classList.toggle('cellFood');
+      document.getElementById(snakeHead).classList.toggle('cellOn');
+      snakeLength++;
+      isFood = false;
     }else if(!gameOver){
       gameOver = true;
       alert("Snake hit its self, Game Over :(");

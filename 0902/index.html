@@ -6,10 +6,28 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header>
+      <h1 id="header">JAVASCRIPT SNAKE!</h1>
+    </header>
     <section id="flexSite">
+
       <section id="ui">
-        <h1 id="header">JAVASCRIPT SNAKE!</h1>
-        <h1 id="score">Score: 0</h1>
+
+        <section id="scores">
+          <h1 id="score" class="score">Score: 0</h1>
+          <h1 id="highscore" class="score">Highscore: 0</h1>
+        </section>
+
+        <button id="restart">Restart</button>
+        <h3 id="difHead">Current Difficulty: Medium [100ms/tick] [1x Score]</h3>
+        <section id="difficulties">
+          <button class="difficulty" id="veryhard">VERY HARD</button>
+          <button class="difficulty" id="hard">HARD</button>
+          <button class="difficulty" id="medium">MEDIUM</button>
+          <button class="difficulty" id="easy">EASY</button>
+          <button class="difficulty" id="veryeasy">VERY EASY</button>
+        </section>
+
       </section>
       <section id="snakeBoard"></section>
     </section>

@@ -17,8 +17,36 @@
 #flexSite{
   display: flex;
 }
-
+#snakeBoard{
+  margin: 2vw;
+}
 #ui{
-  padding: 10px;
+  padding: 1vw;
+  margin: 1.5vw;
+}
+#header{
+  font-size: 40px;
+}
+#scores{
+  display: flex;
+}
+#difficulties{
+  display: flex;
+}
+.score{
+  flex-grow: 1;
   margin: 10px;
+  padding: 7px 30px 10px 30px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+.difficulty{
+  flex-grow: 1;
+  margin: 10px;
+}
+#restart {
+  padding: 7px 30px 10px 30px;
+  margin: 10px;
+  flex-grow: 1;
+  font-size: 15px;
 }

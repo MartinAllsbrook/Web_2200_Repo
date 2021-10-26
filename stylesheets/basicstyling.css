@@ -22,7 +22,7 @@ h2{
 }
 h3{
   font-family: objektiv-mk2, sans-serif;
-  font-weight: 700:
+  font-weight: 700;
   padding: 0px;
   margin: 5px 0px 5px 0px;
 }
@@ -54,16 +54,18 @@ a:active {
 }
 
 button{
-  color: black;
-  background-color: white;
-  border
-}
-button:visited {
-  color: #707070;
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  color: white;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 5px;
 }
 button:hover {
   color: #d90504;
+
 }
 button:active {
   color: #d90504;
+  border-color: #d90504;
 }

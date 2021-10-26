@@ -1,8 +1,14 @@
 // Check that the JS is working
 console.log("JS RUNNING");
 
+let highScore = 0;
+let boardSize = 16;
+let gameOverText = "GAME OVER";
+let tickSpeed = 100;
+let mainCalled = false;
+
 // Call grid generator
-genDivs(16);
+genDivs(boardSize);
 
 // Create all variables for snake
 // Bools to track direction of snake
@@ -34,6 +40,8 @@ let yHistory = [0];
 let gameOver = false;
 // Bool to keep track of wether an input was recived this tick
 let gotInput = false;
+// int to keep track of score
+let snakeScore = 0;
 
 // Event listener scanning for arrow key presses
 window.addEventListener('keydown', function(e) {
@@ -73,21 +81,89 @@ window.addEventListener('keydown', function(e) {
   }
 });
 
+document.getElementById("restart").addEventListener('click', function(){
+  document.getElementById("header").innerHTML = "JAVASCRIPT SNAKE";
+  if(!mainCalled){
+      main()
+  }
+})
+
+document.getElementById("veryhard").addEventListener('click', function(){
+  tickSpeed = 50;
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very hard [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+})
+document.getElementById("hard").addEventListener('click', function(){
+  tickSpeed = 75;
+    document.getElementById("difHead").innerHTML = ["Current Difficulty: Hard [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+})
+document.getElementById("medium").addEventListener('click', function(){
+  tickSpeed = 100;
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Medium [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+})
+document.getElementById("easy").addEventListener('click', function(){
+  tickSpeed = 175;
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Easy [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+})
+document.getElementById("veryeasy").addEventListener('click', function(){
+  tickSpeed = 300;
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very Easy [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+})
+
 // TESTING LINES
 // document.getElementById(snakeHead).classList.toggle('cellOn')
 // console.log(document.getElementById(snakeHead).className);
 // console.log(document.getElementById(snakeHead).className == "cell cellOn");
-
-// Turn on the top left cell to indicate starting position
-document.getElementById(snakeHead).classList.toggle('cellOn');
 
 // Call main(), everything below this is functions
 main();
 
 //--------------------------------------------------------------------------------------------------------------//
 
+function main(){
+  console.log("MAIN CALLED");
+  mainCalled = true;
+  // reset snakeBoard
+  // For each row
+  for(var i = 0; i < boardSize; i++){
+    // For each column in that row
+    for(var x = 0; x <= boardSize-1; x++){
+        // Reset div class name to "cell"
+        document.getElementById(x + " " + i).className = "cell";
+    }
+  }
+
+
+  // reset all variables for snake
+  up = false;
+  right = false;
+  down = false;
+  left = false;
+  snakeHead = ["0 0"];
+  snakeTail = ["0 0"];
+  snakeLength = 3;
+  xTail = 0;
+  yTail = 0;
+  xHead = 0;
+  yHead = 0;
+  xFood = 15;
+  yfood = 15;
+  foodPos = ["15 15"];
+  isFood = false;
+  xHistory = [0];
+  yHistory = [0];
+  gameOver = false;
+  gotInput = false;
+  snakeScore = 0;
+
+  // Turn on the top left cell to indicate starting position
+  document.getElementById(snakeHead).classList.toggle('cellOn');
+
+  waitToStart();
+}
+
+
 // main() waits for the player to press a key, and then starts the game
-function main() {
+function waitToStart() {
   // Run this function repeatedly every 100milisec
   setTimeout(function onTick() {
     // Only accepts a right or down keypress because left and up would immeadiately end the game
@@ -96,7 +172,7 @@ function main() {
       gameOn();
     // Else call main again till a key is pressed
     }else{
-      main();
+      waitToStart();
     }
   }, 100)
 }
@@ -114,7 +190,7 @@ function gameOn() {
       genFood();
     }
 
-    //console.log(Math.floor(Math.random() * 16)); // TESTING LINE
+    //console.log(Math.floor(Math.random() * boardSize)); // TESTING LINE
 
     // Change xHead & yHead based on the snakes current movement state / the player's last button press
     if(up){
@@ -124,7 +200,7 @@ function gameOn() {
         yHead--;
       }else{
         gameOver = true;
-        alert("Snake hit wall, Game Over :(");
+        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
       }
     }else if(down){
       // Must ask if yHead < 15 to keep the snake within the bottom bound
@@ -132,7 +208,7 @@ function gameOn() {
         yHead++;
       }else{
         gameOver = true;
-        alert("Snake hit wall, Game Over :(");
+        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
       }
     }else if(left){
       // Must ask if xHead > 0 to keep the snake within the left bound
@@ -140,7 +216,7 @@ function gameOn() {
         xHead--;
       }else{
         gameOver = true;
-        alert("Snake hit wall, Game Over :(");
+        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
       }
     }else if(right){
       // Must ask if xHead < 15 to keep the snake within the right bound
@@ -148,7 +224,7 @@ function gameOn() {
         xHead++;
       }else{
         gameOver = true;
-        alert("Snake hit wall, Game Over :(");
+        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
       }
     }
 
@@ -168,7 +244,7 @@ function gameOn() {
       isFood = false;
     }else if(!gameOver){
       gameOver = true;
-      alert("Snake hit its self, Game Over :(");
+      gameOverText = "GAME OVER :( THE SNAKE CAN NOT EAT ITS SELF";
     }
 
     // Once the snake has moved enough start removing it's tail
@@ -195,16 +271,21 @@ function gameOn() {
       gameIsOver()
     // Else call gameOn again and prepare for another input next tick
     }else{
-      document.getElementById("score").innerHTML = ["Score: " + (snakeLength-3)]
+      snakeScore = ((snakeLength-3) * (100 / tickSpeed))
+      document.getElementById("score").innerHTML = ["Score: " + (Math.round(snakeScore * 10) / 10)]
+      if(snakeScore > highScore){
+        highScore = snakeScore;
+      }
+      document.getElementById("highscore").innerHTML = ["Highscore: " + (Math.round(highScore * 10) / 10)];
       gotInput = false;
       gameOn();
     }
-  }, 100)
+  }, tickSpeed)
 }
 
 function genFood(){
-  xFood = Math.floor(Math.random() * 16);
-  yFood = Math.floor(Math.random() * 16);
+  xFood = Math.floor(Math.random() * boardSize);
+  yFood = Math.floor(Math.random() * boardSize);
   foodPos = [xFood + " " + yFood];
 
   // if the randomly chosen coords are an empty cell
@@ -220,7 +301,8 @@ function genFood(){
 }
 
 function gameIsOver(){
-  document.getElementById("header").innerHTML = "GAME OVER"
+  document.getElementById("header").innerHTML = gameOverText;
+  mainCalled = false;
 }
 
 // Funtion to generate snake board

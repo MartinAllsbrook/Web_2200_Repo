@@ -1,3 +1,4 @@
+/*test*/
 body {
   font-family: "Akkurat Std";
   src: url(stylesheets\fonts\AkkuratStd-Regular.otf);
@@ -6,7 +7,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
-h1 {
+h1{
   font-family: objektiv-mk2, sans-serif;
   font-weight: 800;
   font-style: normal;

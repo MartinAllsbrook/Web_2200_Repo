@@ -14,9 +14,16 @@ header img {
   position: relative;
   text-align: center;
 }
-.centeredhead {
+#centeredhead {
   position: absolute;
   top: 10%;
+}
+#lowerhead {
+  position: absolute;
+  top: 90%;
+}
+.header {
+  margin-left: 0.5VW;
 }
 #lists {
   display: flex;

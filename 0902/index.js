@@ -271,12 +271,12 @@ function gameOn() {
       gameIsOver()
     // Else call gameOn again and prepare for another input next tick
     }else{
-      snakeScore = ((snakeLength-3) * (100 / tickSpeed))
-      document.getElementById("score").innerHTML = ["Score: " + (Math.round(snakeScore * 10) / 10)]
+      snakeScore = (snakeLength-3);
+      document.getElementById("score").innerHTML = ["Score: " + snakeScore]
       if(snakeScore > highScore){
         highScore = snakeScore;
       }
-      document.getElementById("highscore").innerHTML = ["Highscore: " + (Math.round(highScore * 10) / 10)];
+      document.getElementById("highscore").innerHTML = ["Highscore: " + highScore];
       gotInput = false;
       gameOn();
     }

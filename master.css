@@ -11,7 +11,7 @@ h1{
   font-family: objektiv-mk2, sans-serif;
   font-weight: 800;
   font-style: normal;
-  margin: 0px;
+  margin: 1vw 0vw 0px 0px;
   padding: 0px;
 }
 h2{
@@ -44,7 +44,7 @@ a:link {
   color: white;
 }
 a:visited {
-  color: #707070;
+  color: white;
 }
 a:hover {
   color: #d90504;
@@ -60,6 +60,9 @@ button{
   background-color: black;
   border: 3px solid white;
   border-radius: 5px;
+}
+button:visited{
+  color: white;
 }
 button:hover {
   color: #d90504;

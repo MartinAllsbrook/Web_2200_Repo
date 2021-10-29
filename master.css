@@ -6,6 +6,8 @@ body {
   src: url(stylesheets\fonts\AkkuratStd-Regular.otf);
   color: white;
   background-color: black;
+  width: 100%;
+  height: 100%;
 }
 h1{
   margin: 1vh 0vw 0px 0px;

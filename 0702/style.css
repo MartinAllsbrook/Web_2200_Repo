@@ -4,14 +4,14 @@
 }
 
 div {
-  border: 1px solid black;
+  border: 1px solid white;
   margin-left: 1vw;
 }
 
 .flexitem{
-  flex-grow: 1;
+ flex: 1 1 0px
 }
 
 .flexitemX2{
-  flex-grow: 2;
+  flex: 1 1 0px;
 }

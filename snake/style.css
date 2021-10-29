@@ -14,39 +14,43 @@
   background-color: #d90504;
 }
 /*General Styling*/
-#flexSite{
+.flex{
   display: flex;
 }
 #snakeBoard{
-  margin: 2vw;
+  padding: 2vw 2vw 0vw 0.5vw;
+  flex: 1 1 0px;
 }
 #ui{
-  padding: 1vw;
-  margin: 1.5vw;
-}
-#header{
-  font-size: 40px;
-}
-#scores{
-  display: flex;
-}
-#difficulties{
-  display: flex;
+  padding: 0px;
+  margin: 2vw 0.5vw 0vw 1.5vw;
+  flex: 0.7 1 0px;
 }
 .score{
-  flex-grow: 1;
+  flex: 1 1 0px;
   margin: 10px;
   padding: 7px 30px 10px 30px;
   border: 3px solid white;
   border-radius: 5px;
+  position: relative;
+  text-align: center;
+
 }
 .difficulty{
-  flex-grow: 1;
+  flex: 1 1 0px;
   margin: 10px;
+
 }
 #restart {
   padding: 7px 30px 10px 30px;
   margin: 10px;
   flex-grow: 1;
   font-size: 15px;
+}
+#directions{
+  margin-top: -0.5vw;
+}
+#header{
+  font-size: 50px;
+  margin-left: 0.2vw
 }

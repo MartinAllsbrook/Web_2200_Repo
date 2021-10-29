@@ -47,7 +47,7 @@ let snakeScore = 0;
 window.addEventListener('keydown', function(e) {
   // console.log('You pressed ' + e.key); // TESTING LINE
   // If the ArrowUp key is pressed and the snake isnt going down, set the snakes current state to up
-  if(e.key == "ArrowUp" && !down && !gotInput){
+  if((e.key == "ArrowUp" || e.key == "w") && !down && !gotInput){
     // console.log('Up Sucess'); // TESTING LINE
     // Set up to true and all other directions to false
     up = true;
@@ -56,21 +56,21 @@ window.addEventListener('keydown', function(e) {
     left = false;
     gotInput = true;
   // Repeat with right/left
-  }else if(e.key == "ArrowRight" && !left && !gotInput){
+}else if((e.key == "ArrowRight" || e.key == "d") && !left && !gotInput){
     up = false;
     right = true;
     down = false;
     left = false;
     gotInput = true;
   // Repeat with down/up
-  }else if(e.key == "ArrowDown" && !up && !gotInput){
+}else if((e.key == "ArrowDown" || e.key == "s") && !up && !gotInput){
     up = false;
     right = false;
     down = true;
     left = false;
     gotInput = true;
   // Repeat with left/right
-  }else if(e.key == "ArrowLeft" && !right && !gotInput){
+}else if((e.key == "ArrowLeft" || e.key == "a") && !right && !gotInput){
     up = false;
     right = false;
     down = false;
@@ -90,23 +90,23 @@ document.getElementById("restart").addEventListener('click', function(){
 
 document.getElementById("veryhard").addEventListener('click', function(){
   tickSpeed = 50;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very hard [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very hard [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("hard").addEventListener('click', function(){
   tickSpeed = 75;
-    document.getElementById("difHead").innerHTML = ["Current Difficulty: Hard [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+    document.getElementById("difHead").innerHTML = ["Current Difficulty: Hard [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("medium").addEventListener('click', function(){
   tickSpeed = 100;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Medium [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Medium [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("easy").addEventListener('click', function(){
   tickSpeed = 175;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Easy [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Easy [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("veryeasy").addEventListener('click', function(){
   tickSpeed = 300;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very Easy [" + tickSpeed + "ms/tick] [" + (Math.round((100 / tickSpeed) * 100) / 100) + "x Score]"];
+  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very Easy [" + tickSpeed + "ms/tick]"];
 })
 
 // TESTING LINES

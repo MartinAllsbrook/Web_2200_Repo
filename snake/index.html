@@ -7,30 +7,36 @@
   </head>
   <body>
     <header>
-      <h1 id="header">JAVASCRIPT SNAKE!</h1>
+      <h1 id="header">JAVASCRIPT SNAKE</h1>
     </header>
-    <section id="flexSite">
-
+    <section class="flex" id="flexSite">
       <section id="ui">
-        <h3>Directions:</h3>
+        <h2 id="directions">Directions:</h2>
         <ul>
-
+          <li>WASD or arrow keys to move</li>
+          <li>Red squares are food</li>
+          <li>Score points and grow your snake by eating food</li>
+          <li>The game ends if the snake hits its self or the walls</li>
         </ul>
-        <section id="scores">
+
+        <section id="scores" class="flex">
           <h1 id="score" class="score">Score: 0</h1>
           <h1 id="highscore" class="score">Highscore: 0</h1>
         </section>
 
-        <button id="restart">Restart</button>
-        <h3 id="difHead">Current Difficulty: Medium [100ms/tick] [1x Score]</h3>
-        <section id="difficulties">
+        <section class="flex">
+          <button id="restart">Restart</button>
+        </section>
+
+        <h2 id="difHead">Current Difficulty: Medium [100ms/tick]</h2>
+        <section class="flex" id="difficulties">
           <button class="difficulty" id="veryhard">VERY HARD</button>
           <button class="difficulty" id="hard">HARD</button>
           <button class="difficulty" id="medium">MEDIUM</button>
           <button class="difficulty" id="easy">EASY</button>
           <button class="difficulty" id="veryeasy">VERY EASY</button>
         </section>
-        <p><a href="../index.html">Back</a></p>
+        <h2><a href="../index.html">Back</a></h2>
       </section>
       <section id="snakeBoard"></section>
     </section>

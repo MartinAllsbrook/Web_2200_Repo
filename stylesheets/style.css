@@ -1,22 +1,16 @@
 header {
   padding: 0px;
-  margin: 0px 0px 0px 0px;
-}
-header h1{
-  font-size: 6.5vw;
+  margin: 0px 0px 0.1vh 0px;
 }
 header img {
   padding: 0px;
   margin: 0px 0px 0px 0px;
   width: 100%;
+  bottom: 40px;
 }
 .container {
   position: relative;
   text-align: center;
-}
-#centeredhead {
-  position: absolute;
-  top: 10%;
 }
 #lowerhead {
   position: absolute;

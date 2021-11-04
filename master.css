@@ -1,9 +1,14 @@
 /*test*/
+@font-face {
+  font-family: "Akkurat";
+  src: url("stylesheets/fonts/AkkuratStd-Regular.otf"),
+       url("stylesheets/fonts/AkkuratTT-Regular.ttf");
+}
+
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Akkurat Std";
-  src: url(stylesheets\fonts\AkkuratStd-Regular.otf);
+  font-family: Akkurat;
   color: white;
   background-color: black;
   width: 100%;

@@ -15,9 +15,15 @@
   padding: 0;
 }
 
-.image {
+#image {
   position: relative;
   text-align: center;
+  width: auto;
+}
+img{
+  height: 75vh;
+  object-fit: cover;
+  margin: auto;
 }
 
 button{

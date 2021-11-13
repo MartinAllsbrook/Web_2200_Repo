@@ -1,8 +1,10 @@
 /*Styling for game tiles*/
 .row {
   display: flex;
+
 }
 .cell {
+
   border: 1px solid white;
   padding: 2.2vh;
   margin: 0px;
@@ -30,7 +32,7 @@
   flex: 1 1 0px;
   margin: 10px;
   padding: 7px 30px 10px 30px;
-  border: 3px solid white;
+  border: 2px solid white;
   border-radius: 5px;
   position: relative;
   text-align: center;

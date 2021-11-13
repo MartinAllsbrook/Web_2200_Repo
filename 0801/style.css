@@ -1,11 +1,16 @@
+
 #types {
   display: flex;
-  border: 1px solid black;
+    margin: 0 10px;
 }
-
+h1{
+  margin: 5px 20px;
+  font-size:
+}
 .type {
-  flex-grow: 1;
-  width: auto;
+  flex: 1 1 0px;
+  border: 2px solid white;
+  margin: 0px
 }
 .type img {
   max-width: 30vw;
@@ -13,25 +18,35 @@
 .type h2 {
   margin: 0.3vw 0vw 0.3vw 1.7vw;
   padding: 0;
+  font-size: 1.5vw;
 }
 
 #image {
   position: relative;
   text-align: center;
-  width: auto;
+  border: 2px solid white;
+  border-top: none;
+  margin: 0 10px -2px 10px;
+  height: 80vh;
 }
 img{
-  height: 75vh;
-  object-fit: cover;
-  margin: auto;
-}
+  height: 80%;
+  margin: 10px 0;
 
+}
+.leftadj{
+  border-right: none;
+}
 button{
-  float: right;
   padding: 10px 50px;
-  margin-right: 3vw;
+  margin: 0 10px;
+  border-radius: 0px;
+}
+#submit{
+  float: right;
 }
 
 .active{
-  background-color: blue;
+
+  border-bottom: none;
 }

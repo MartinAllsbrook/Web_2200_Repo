@@ -69,18 +69,18 @@ button{
   font-weight: 800;
   color: white;
   background-color: black;
-  border: 3px solid white;
+  border: 2px solid white;
   border-radius: 5px;
 }
 button:visited{
   color: white;
-  border: 3px solid white;
+  border: 2px solid white;
 }
 button:hover {
   color: #d90504;
-  border: 3px solid white;
+  border: 2px solid white;
 }
 button:active {
   color: #d90504;
-    border: 3px solid #d90504;
+  border: 2px solid #d90504;
 }

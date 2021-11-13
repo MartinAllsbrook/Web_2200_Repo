@@ -1,18 +1,30 @@
 const options = document.getElementsByClassName("type");
-const imageSpot = document.getElementsByClassName("image");
 const images = ["Didot.png", "AvantGarde.png", "Helvetica.jpg"];
 const titles = ["DIDOT", "AVANTGARDE", "HELVETICA"];
+let prevChoice;
 
 
 for(i=0;i<options.length;i++){
-  // console.log(options[i].innerHTML);
-  document.getElementsByClassName('label')[i].innerHTML = titles[i];
-  imageSpot[i].innerHTML += '<img src="assets/'+images[i]+'">';
-  options[i].setAttribute("id", titles[i])
-  options[i].addEventListener("click", function(){changeColor(this.id)});
+  options[i].innerHTML = "<h2>" + titles[i] + "</h2>";
+  options[i].addEventListener("click", setActive, false);
+  options[i].id = titles[i];
 }
 
-function changeColor(sectionID) {
-  console.log(sectionID);
-  document.getElementById(sectionID).classList.toggle("blue");
+// e = event
+function setActive(e){
+
+  prevChoice = document.getElementsByClassName()
+  if(prevChoice != undefined){
+    document.getElementById(prevChoice).classList.toggle("active");
+  }
+  console.log("prevChoice " + prevChoice);
+
+  // make sure we dont just target inner html
+  if(e.target.tagName == "H2"){
+    console.log("h2 clicked");
+    e.target.parentNode.classList.toggle("active");
+  }else{
+    console.log("div clicked");
+    e.target.classList.toggle("active");
+  }
 }

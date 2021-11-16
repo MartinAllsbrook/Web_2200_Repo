@@ -70,7 +70,7 @@ button{
   color: white;
   background-color: black;
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 button:visited{
   color: white;

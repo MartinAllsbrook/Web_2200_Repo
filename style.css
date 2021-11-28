@@ -1,0 +1,27 @@
+header {
+  padding: 0px;
+  margin: 0px 0px 0.1vh 0px;
+  position: relative;
+}
+header img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  /* bottom: 40px; */
+}
+header h1{
+  padding: 1.8vw 1.4vw;
+  margin: 0;
+  font-weight: 800;
+  font-size: 4vw;
+}
+#title{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+#portfolio{
+  text-align: right;
+}

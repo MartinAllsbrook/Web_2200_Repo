@@ -43,6 +43,12 @@ ul {
   margin: 0.2vh 0.2vw 0.2vh 25px;
 }
 
+.flex{
+  display: flex;
+}
+.flexbox{
+  flex: 1 1 0px;
+}
 #main {
   margin: 0px 10px 0px 1%;
 }

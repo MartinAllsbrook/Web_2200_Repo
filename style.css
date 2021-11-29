@@ -1,27 +1,61 @@
 header {
   padding: 0px;
-  margin: 0px 0px 0.1vh 0px;
-  position: relative;
+  margin: 0px 0px -0.4vw 0px;
+  /* position: relative; */
 }
-header img {
+h1{
+  margin-top: 1.8vw;
+  margin-right: 1.4vw;
+}
+p {
+  margin: 0.4vw 1.4vw;
   padding: 0;
-  margin: 0;
-  width: 100%;
-  /* bottom: 40px; */
 }
-header h1{
-  padding: 1.8vw 1.4vw;
-  margin: 0;
+a:link {
+  color: white;
+  text-decoration: none;
+  font-family: objektiv-mk2, sans-serif;
   font-weight: 800;
-  font-size: 4vw;
+  font-size: 3vw;
+  margin: 0vw;
+  padding: 0vw;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  margin: 0vw;
+  padding: 0vw;
+}
+a:hover {
+  color: #d90504;
+  text-decoration: none;
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  margin: 0vw;
+  padding: 0vw;
+}
+a:active {
+  color: #d90504;
+  text-decoration: none;
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  margin: 0vw;
+  padding: 0vw;
 }
 #title{
   position: absolute;
   width: 100%;
   top: 0;
-  margin: 0;
-  padding: 0;
 }
 #portfolio{
   text-align: right;
+  flex: 1;
+}
+#martinallsbrook{
+  flex: 1.5;
 }

@@ -1,0 +1,12 @@
+img{
+  width: 75%;
+  margin: 10vw;
+  padding: 0;
+}
+body{
+    background-image: url("../assets/CS68BlackOnBlack.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

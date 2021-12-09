@@ -1,6 +1,5 @@
 img{
-  width: 75%;
-  margin: 10vw;
+  margin-top: 10vw;
   padding: 0;
 }
 body{
@@ -9,4 +8,8 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+h1{
+  margin-top: 1.7vw;
+  line-height: 3.3vw;
 }

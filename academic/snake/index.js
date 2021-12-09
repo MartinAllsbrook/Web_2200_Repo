@@ -200,7 +200,7 @@ function gameOn() {
         yHead--;
       }else{
         gameOver = true;
-        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
+        gameOverText = "GAME OVER";
       }
     }else if(down){
       // Must ask if yHead < 15 to keep the snake within the bottom bound
@@ -208,7 +208,7 @@ function gameOn() {
         yHead++;
       }else{
         gameOver = true;
-        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
+        gameOverText = "GAME OVER";
       }
     }else if(left){
       // Must ask if xHead > 0 to keep the snake within the left bound
@@ -216,7 +216,7 @@ function gameOn() {
         xHead--;
       }else{
         gameOver = true;
-        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
+        gameOverText = "GAME OVER";
       }
     }else if(right){
       // Must ask if xHead < 15 to keep the snake within the right bound
@@ -224,7 +224,7 @@ function gameOn() {
         xHead++;
       }else{
         gameOver = true;
-        gameOverText = "GAME OVER :( THE SNAKE HIT THE WALL";
+        gameOverText = "GAME OVER";
       }
     }
 
@@ -244,7 +244,7 @@ function gameOn() {
       isFood = false;
     }else if(!gameOver){
       gameOver = true;
-      gameOverText = "GAME OVER :( THE SNAKE CAN NOT EAT ITS SELF";
+      gameOverText = "GAME OVER";
     }
 
     // Once the snake has moved enough start removing it's tail
@@ -272,11 +272,11 @@ function gameOn() {
     // Else call gameOn again and prepare for another input next tick
     }else{
       snakeScore = (snakeLength-3);
-      document.getElementById("score").innerHTML = ["Score: " + snakeScore]
+      document.getElementById("score").innerHTML = ["SCORE: " + snakeScore]
       if(snakeScore > highScore){
         highScore = snakeScore;
       }
-      document.getElementById("highscore").innerHTML = ["Highscore: " + highScore];
+      document.getElementById("highscore").innerHTML = ["HIGH SCORE: " + highScore];
       gotInput = false;
       gameOn();
     }

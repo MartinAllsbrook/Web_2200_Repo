@@ -24,25 +24,26 @@ header img {
   /* bottom: 40px; */
 }
 h1{
-  font-family: objektiv-mk2, sans-serif;
+  font-family: objektiv-mk1, sans-serif;
+  font-weight: 900;
   padding: 0;
   margin: 0 0 0 1.4vw;
-  font-weight: 900;
   font-size: 4vw;
-  position: absolute;
   top: 0;
 }
 /* -=-=-=-=-=- HEADER STYLE -=-=-=-=-=- */
 
 h2{
-  font-family: objektiv-mk2, sans-serif;
+  font-family: objektiv-mk1, sans-serif;
   font-weight: 800;
+  font-size: 2vw;
   padding: 0;
   margin: 0 0 0 1.4vw;
 }
 h3{
-  font-family: objektiv-mk2, sans-serif;
-  font-weight: 700;
+  font-family: objektiv-mk1, sans-serif;
+  font-weight: 800;
+  font-size: 2vw;
   padding: 0;
   margin: 0 0 0 1.4vw;
 }
@@ -84,9 +85,30 @@ a:active {
 }
 /* -=-=-=-=-=- LINK STYLE -=-=-=-=-=- */
 
+/* -=-=-=-=-=- BIGLINK STYLE -=-=-=-=-=- */
+a.biglink:link {
+  color: white;
+  text-decoration: none;
+  font-family: objektiv-mk1, sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  margin: 0vw;
+  padding: 0vw;
+}
+a.biglink:visited {
+  color: white;
+}
+a.biglink:hover {
+  color: rgb(60, 60, 60);
+}
+a.biglink:active {
+  color: #d90504;
+}
+/* -=-=-=-=-=- BIGLINK STYLE -=-=-=-=-=- */
+
 /* -=-=-=-=-=- BUTTON STYLE -=-=-=-=-=- */
 button{
-  font-family: objektiv-mk2, sans-serif;
+  font-family: objektiv-mk1, sans-serif;
   font-weight: 800;
   color: white;
   background-color: black;

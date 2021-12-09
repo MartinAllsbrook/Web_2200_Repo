@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <section class="flex" id="flexSite">
-      <section id="ui">
+    <section class="flex">
+      <section id="ui" class="flexbox">
         <h1 id="header">JAVASCRIPT SNAKE</h1>
 
-        <h2 id="directions">Directions:</h2>
+        <h3 id="directions">DIRECTIONS:</h2>
         <ul>
           <li>WASD or arrow keys to move</li>
           <li>Red squares are food</li>
@@ -20,25 +20,25 @@
         </ul>
 
         <section id="scores" class="flex">
-          <h1 id="score" class="score">Score: 0</h1>
-          <h1 id="highscore" class="score">Highscore: 0</h1>
+          <h2 id="score" class="score">SCORE: 0</h1>
+          <h2 id="highscore" class="score">HIGH SCORE: 0</h1>
         </section>
 
         <section class="flex">
-          <button id="restart">Restart</button>
+          <button id="restart">RESTART</button>
         </section>
 
-        <h2 id="difHead">Current Difficulty: Medium [100ms/tick]</h2>
+        <h3 id="difHead">Current Difficulty: Medium [100ms/tick]</h2>
         <section class="flex" id="difficulties">
           <button class="difficulty" id="veryhard">VERY HARD</button>
           <button class="difficulty" id="hard">HARD</button>
           <button class="difficulty" id="medium">MEDIUM</button>
           <button class="difficulty" id="easy">EASY</button>
-          <button class="difficulty" id="veryeasy">VERY EASY</button>
+          <button class="difficulty last" id="veryeasy">VERY EASY</button>
         </section>
-        <h2><a href="../index.html">Back</a></h2>
+        <h3><a href="../index.html">BACK</a></h2>
       </section>
-      <section id="snakeBoard"></section>
+      <section id="snakeBoard" class="flexbox"></section>
     </section>
 
     <script src="index.js"></script>

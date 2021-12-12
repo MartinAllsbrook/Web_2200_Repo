@@ -90,23 +90,23 @@ document.getElementById("restart").addEventListener('click', function(){
 
 document.getElementById("veryhard").addEventListener('click', function(){
   tickSpeed = 50;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very hard [" + tickSpeed + "ms/tick]"];
+  document.getElementById("difHead").innerHTML = ["CURRENT DIFFICULTY: VERY HARD [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("hard").addEventListener('click', function(){
   tickSpeed = 75;
-    document.getElementById("difHead").innerHTML = ["Current Difficulty: Hard [" + tickSpeed + "ms/tick]"];
+    document.getElementById("difHead").innerHTML = ["CURRENT DIFFICULTY: HARD [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("medium").addEventListener('click', function(){
   tickSpeed = 100;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Medium [" + tickSpeed + "ms/tick]"];
+  document.getElementById("difHead").innerHTML = ["CURRENT DIFFICULTY: MEDIUM [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("easy").addEventListener('click', function(){
   tickSpeed = 175;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Easy [" + tickSpeed + "ms/tick]"];
+  document.getElementById("difHead").innerHTML = ["CURRENT DIFFICULTY: EASY [" + tickSpeed + "ms/tick]"];
 })
 document.getElementById("veryeasy").addEventListener('click', function(){
   tickSpeed = 300;
-  document.getElementById("difHead").innerHTML = ["Current Difficulty: Very Easy [" + tickSpeed + "ms/tick]"];
+  document.getElementById("difHead").innerHTML = ["CURRENT DIFFICULTY: VERY EASY [" + tickSpeed + "ms/tick]"];
 })
 
 // TESTING LINES

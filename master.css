@@ -45,7 +45,15 @@ h3{
   padding: 0;
   margin: 0 0 0 1.4vw;
 }
+h4 {
+  font-family: objektiv-mk1, sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+  padding: 0;
+  margin: 0 0 0 1.4vw;
+}
 p {
+  font-size: 1vw;
   padding: 0;
   margin: 0 0 0 1.4vw;
 }

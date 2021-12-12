@@ -1,6 +1,6 @@
 header {
   padding: 0px;
-  margin: 0px 0px -0.4vw 0px;
+  margin: 0px 0px 0vw 0px;
   /* position: relative; */
 }
 h1{
@@ -9,7 +9,7 @@ h1{
   position: relative;
 }
 p {
-  margin: 0.4vw 1.4vw;
+  margin: 0 1.4vw;
   padding: 0;
 }
 #title{

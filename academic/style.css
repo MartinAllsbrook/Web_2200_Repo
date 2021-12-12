@@ -1,16 +1,27 @@
 h1 {
-  margin-top: 0.293vw;
+  margin-top: 2vw;
 }
 img{
-  background-attachment: scroll;
+  width: 100%;
+  object-fit: cover;
+  /* position: relative;
+  top: -1.7vw; */
 }
 body{
-    background-image: url("assets/CS68BlackOnBlack.png");
+    background-image: url("assets/CSSVG.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 #spacer{
-  height: 100vw;
+  height: 100vh;
+}
+#links{
+  height: 95vh;
+  padding-bottom: 1vw;
+}
+.imgholder{
+  height: 0vw;
+  overflow: hidden;
 }

@@ -14,8 +14,7 @@ body {
   height: 100%;
 }
 
-/* -=-=-=-=-=- HEADER STYLE -=-=-=-=-=- */
-header img {
+img {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -25,11 +24,10 @@ h1{
   font-family: objektiv-mk1, sans-serif;
   font-weight: 900;
   padding: 0;
-  margin: 0 0 0 1.4vw;
+  margin: 1vw 0 0 1.4vw;
   font-size: 4vw;
   top: 0;
 }
-/* -=-=-=-=-=- HEADER STYLE -=-=-=-=-=- */
 
 h2{
   font-family: objektiv-mk1, sans-serif;

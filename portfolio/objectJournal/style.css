@@ -1,0 +1,16 @@
+#maincontent{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px solid white; */
+}
+.post{
+  /* border: 1px solid white; */
+  margin: 0;
+  padding: 0;
+}
+img{
+  margin: 2vw;
+  width: auto;
+}

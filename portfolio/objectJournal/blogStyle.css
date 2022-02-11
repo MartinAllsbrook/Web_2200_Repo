@@ -1,0 +1,27 @@
+img{
+  display: block;
+  width: 25%;
+}
+
+h2{
+  margin-top: 1vw;
+  margin-bottom: 0.25vw;
+}
+
+h4{
+
+  margin-top: 0.5vw;
+  margin-bottom: 0.25vw;
+}
+
+
+
+#diagram{
+  width: 100%;
+}
+
+p{
+  margin-left: 2vw;
+  font-size: 1.2vw;
+  margin-bottom: 0.25vw;
+}
